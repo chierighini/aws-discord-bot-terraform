@@ -27,6 +27,7 @@ resource "aws_instance" "bot_instance" {
   EOT
 
   ebs_block_device {
+    device_name = "/dev/sda"
     volume_size = 10
   }
 
