@@ -23,7 +23,7 @@ resource "aws_instance" "bot_instance" {
     echo "Run bot"
     docker pull renatofernandes/discord-bot
 
-    docker run -e CLIENT_ID='${discord_client_id}' -e TOKEN='${discord_token}' renatofernandes/discord-bot
+    docker run -e CLIENT_ID='${var.discord_client_id}' -e TOKEN='${var.discord_token}' renatofernandes/discord-bot
   EOT
 
   tags = {
