@@ -26,6 +26,10 @@ resource "aws_instance" "bot_instance" {
     docker run -e CLIENT_ID='${var.discord_client_id}' -e TOKEN='${var.discord_token}' renatofernandes/discord-bot
   EOT
 
+  ebs_block_device {
+    size = 10
+  }
+
   tags = {
     Name = "Discord bot instance"
   }
