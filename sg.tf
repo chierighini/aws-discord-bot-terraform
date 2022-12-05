@@ -1,7 +1,7 @@
 resource "aws_security_group" "sg_discord_bot" {
   name        = "Discord bot SG"
   description = "Allow SSH and HTTPS inbound traffic"
-  vpc_id      = aws_vpc.example_vpc.id
+  vpc_id      = var.vpc_id
 
   ingress {
     from_port   = 22

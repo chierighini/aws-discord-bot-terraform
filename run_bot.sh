@@ -15,4 +15,4 @@ systemctl start docker
 echo "Run bot"
 docker pull renatofernandes/discord-bot
 
-docker run -e CLIENT_ID='{client-id}' -e TOKEN='{token}' renatofernandes/discord-bot
+docker run -e CLIENT_ID='${discord_client_id}' -e TOKEN='${discord_token}' renatofernandes/discord-bot
