@@ -27,7 +27,7 @@ resource "aws_instance" "bot_instance" {
   EOT
 
   ebs_block_device {
-    size = 10
+    volume_size = 10
   }
 
   tags = {
